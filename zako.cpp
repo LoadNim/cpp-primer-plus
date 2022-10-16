@@ -1,6 +1,6 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 int main(){
-    std::cout<<"ÀÚÄÚ"<<std::endl;
-    std::cout<<"ÀÚÄÚ"<<std::endl;
+    std::cout<<"ìžì½”"<<std::endl;
+    std::cout<<"ìžì½”"<<std::endl;
 }
