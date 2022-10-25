@@ -1,6 +1,6 @@
 #include <iostream>
+using namespace std;
 
 int main(){
-    std::cout<<"ìžì½”"<<std::endl;
-    std::cout<<"ìžì½”"<<std::endl;
+    cout<<"ÀÚÄÚ"<<endl;
 }
