@@ -15,8 +15,7 @@ int main(){
     for(int i = 0; i < num; ++i){
         cout<<"자동차 #"<<i+1<<":"<<endl;
         cout<<"제작업체: ";
-        cin>>list[i].maker;
-        cin.get();
+        cin.getline(list[i].maker, 19);
         cout<<"제작년도: ";
         cin>>list[i].year;
         cin.get();
