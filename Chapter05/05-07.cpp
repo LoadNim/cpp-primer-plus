@@ -8,21 +8,21 @@ struct car{
 
 int main(){
     int num;
-    cout<<"ëª‡ ëŒ€ì˜ ì°¨ë¥¼ ëª©ë¡ìœ¼ë¡œ ê´€ë¦¬í•˜ì‹œê² ìŠµë‹ˆê¹Œ? ";
+    cout<<"¸î ´ëÀÇ Â÷¸¦ ¸ñ·ÏÀ¸·Î °ü¸®ÇÏ½Ã°Ú½À´Ï±î? ";
     cin>>num;
     cin.get();
     car* list = new car[num];
     for(int i = 0; i < num; ++i){
-        cout<<"ìë™ì°¨ #"<<i+1<<":"<<endl;
-        cout<<"ì œì‘ì—…ì²´: ";
+        cout<<"ÀÚµ¿Â÷ #"<<i+1<<":"<<endl;
+        cout<<"Á¦ÀÛ¾÷Ã¼: ";
         cin>>list[i].maker;
         cin.get();
-        cout<<"ì œì‘ë…„ë„: ";
+        cout<<"Á¦ÀÛ³âµµ: ";
         cin>>list[i].year;
         cin.get();
     }
-    cout<<"í˜„ì¬ ê·€í•˜ê°€ ë³´ìœ í•˜ê³  ìˆëŠ” ìë™ì°¨ ëª©ë¡ì€ ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤."<<endl;
+    cout<<"ÇöÀç ±ÍÇÏ°¡ º¸À¯ÇÏ°í ÀÖ´Â ÀÚµ¿Â÷ ¸ñ·ÏÀº ´ÙÀ½°ú °°½À´Ï´Ù."<<endl;
     for(int i = 0; i < num; i++){
-        cout<<list[i].year<<"ë…„í˜• "<<list[i].maker<<endl;
+        cout<<list[i].year<<"³âÇü "<<list[i].maker<<endl;
     }
 }
