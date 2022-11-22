@@ -8,8 +8,8 @@ struct donate{
 };
 
 int main(){
-    int num;
     cout<<"기부자의 수를 입력하십시오 : ";
+    int num;
     cin>>num;
     cin.get();
     if(num){

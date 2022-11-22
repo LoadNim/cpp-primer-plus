@@ -4,8 +4,8 @@
 using namespace std;
 
 int main(){
-    int consonant = 0, vowels = 0, etc = 0;
     string input;
+    int consonant = 0, vowels = 0, etc = 0;
     cout<<"단어들을 입력하시오 (끝내려면 q):"<<endl;
     cin>>input;
     while (input != "q"){

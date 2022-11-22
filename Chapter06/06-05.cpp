@@ -2,8 +2,8 @@
 using namespace std;
 
 int main(){
-    int tvarp;
     cout<<"소득 입력 (종료를 원한다면 음수를 입력하시오) : ";
+    int tvarp;
     while (cin>>tvarp && tvarp > 0){
         double tax = 0;
         if(tvarp <= 5000){
