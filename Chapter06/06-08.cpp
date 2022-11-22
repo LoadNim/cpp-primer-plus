@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
     ifstream fp;
-    fp.open("data.txt");
+    fp.open("06-08.txt");
     int count = 0;
     while (!fp.eof()){
         fp.get();
