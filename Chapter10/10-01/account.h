@@ -10,8 +10,8 @@ class acc{
     
     public:
         acc();
-        void show_acc(acc& ac) const;
-        void deposit(acc& ac);
-        void withdraw(acc& ac);
+        void show_acc() const;
+        void deposit();
+        void withdraw();
 };
 #endif

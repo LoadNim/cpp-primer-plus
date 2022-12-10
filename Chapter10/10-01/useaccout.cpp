@@ -13,11 +13,11 @@ int main(){
     cin>>sel;
     while (sel != 4){
         switch (sel){
-        case 1: ac1.show_acc(ac1);
+        case 1: ac1.show_acc();
                 break;
-        case 2: ac1.deposit(ac1);
+        case 2: ac1.deposit();
                 break;
-        case 3: ac1.withdraw(ac1);
+        case 3: ac1.withdraw();
                 break;
         case 4: cout<<"프로그램을 종료합니다."<<endl;
                 exit(1);
