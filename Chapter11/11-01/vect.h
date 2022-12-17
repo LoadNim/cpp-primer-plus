@@ -1,3 +1,5 @@
+//not my source
+
 // vect.h -- 모든 상태와 <<를 사용하는, Vector 클래스
 #ifndef VECTOR_H_
 #define VECTOR_H_
