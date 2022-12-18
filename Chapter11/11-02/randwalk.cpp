@@ -1,5 +1,3 @@
-//not my source
-
 // randwalk.cpp -- Vector 클래스를 사용한다
 // vect.cpp 파일과 함께 컴파일한다
 #include <iostream>
