@@ -1,5 +1,3 @@
-//not my source
-
 // vect.cpp -- Vector 클래스를 위한 메서드
 #include <cmath>
 #include "vect.h"   // <iostream>을 포함한다
