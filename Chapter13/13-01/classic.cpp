@@ -16,13 +16,6 @@ Cd::Cd(const Cd& d){
     playtime = d.playtime;
 }
 
-Cd::Cd(){
-    strcpy(performers, nullptr);
-    strcpy(label, nullptr);
-    selections = 0;
-    playtime = 0;
-}
-
 void Cd::Report() const{
     using std::cout;
     using std::endl;
@@ -53,4 +46,10 @@ Classic::Classic(const Cd& d, char* s1) : Cd(d){
 void Classic::Report() const{
     Cd::Report();
     std::cout<<"대표곡 : "<<representative<<std::endl;
+}
+
+Classic& Classic::operator=(const Classic& d){
+    Cd::operator=(d);
+    strcpy(representative, d.representative);
+    return *this;
 }
