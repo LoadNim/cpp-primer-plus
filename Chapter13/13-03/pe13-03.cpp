@@ -53,9 +53,6 @@ int main(){
     cout<<"\nView 메서드를 활용한 출력\n";
     for(int i = 0; i < 4; ++i) arr[i]->View();
 
-    cout<<"\noperator<< 함수를 활용한 출력\n";
-    for(int i = 0; i < 4; ++i) cout<<*arr[i];
-
     cout<<"\n대입 연산자 test\n";
     b = a;
     cout<<b;
