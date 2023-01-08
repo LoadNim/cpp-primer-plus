@@ -1,4 +1,4 @@
-#ifndef WINEC_H_
+#ifndef WINE_H_
 #define WINE_H_
 #include <valarray>
 #include <string>

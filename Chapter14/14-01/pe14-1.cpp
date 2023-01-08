@@ -1,5 +1,5 @@
 #include <iostream>
-#include "winec.h"
+#include "wine.h"
 
 int main(){
     using std::cin;

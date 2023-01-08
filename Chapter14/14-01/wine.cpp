@@ -1,7 +1,7 @@
 #include <iostream>
 #include <valarray>
 #include <string>
-#include "winec.h"
+#include "wine.h"
 
 template<class T1, class T2>
 T1 & Pair<T1,T2>::first()
