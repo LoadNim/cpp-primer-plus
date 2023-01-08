@@ -28,7 +28,7 @@ class Wine{
         Wine(const char* l, int y) : label(l), year_num(y), p(ArrayInt(y), ArrayInt(y)){};
         Wine(const char* l, int y, const int yr[], const int bot[]) : label(l), year_num(y), p(ArrayInt(yr, y), ArrayInt(bot, y)){};
         std::string& Label();
-        int sum(){return p.second().sum();};
+        int sum(){return p.second().sum();}
         void GetBottles();
         void Show();
 };
