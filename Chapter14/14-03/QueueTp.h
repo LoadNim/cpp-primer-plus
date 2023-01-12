@@ -1,55 +1,54 @@
 #ifndef QUEUETP_H_
 #define QUEUETP_H_
-#include "workermi.h"
 #include <iostream>
 
-template <typename type>
+template <typename T>
 class Queue{
     private:
-        struct node{type data; node* next = nullptr;};
+        struct Node{T data = nullptr; Node* next = nullptr;};
+        Node* head;
+        Node* rear = head;
         int q_size = 0;
-        node* head = nullptr;
-        node* rear = head;
+    
     public:
         Queue(){}
-        void push(type& input);
-        void pop();
+        void push(T& input);
+        T pop();
+        T set_head(){return head->data;}
+        bool empty();
 };
 
-template <typename type>
-void Queue<type>::push(type& input){
-    if(!q_size){
-        head->data = input;
-    }
+template <typename T>
+void Queue<T>::push(T& input){
+    if(!q_size) head->data = input;
     else{
-        node* newnode = new node;
+        Node* newnode = new Node;
         newnode->data = input;
         rear->next = newnode;
+        rear = newnode;
     }
     ++q_size;
 }
 
-template <typename type>
-void Queue<type>::pop(){
-    if(q_size && q_size != 1){
-        head->data->Show();
-        std::cout<<"\n의 정보를 삭제합니다.\n";
-        node* temp = head;
+template <typename T>
+T Queue<T>::pop(){
+    if(q_size == 1){
+        --q_size;
+        return nullptr;
+    }
+    else{
+        Node* temp = head;
         head = head->next;
         delete temp;
         --q_size;
+        return head->data;
     }
-    else if(q_size == 1){
-        head->data->Show();
-        std::cout<<"\n의 정보를 삭제합니다.\n";
-        head->data = nullptr;
-        head = nullptr;
-        rear = head;
-        --q_size;
-    }
-    else{
-        std::cout<<"큐가 비었습니다"<<std::endl;
-    }
+}
+
+template <typename T>
+bool Queue<T>::empty(){
+    if(q_size) return false;
+    else return true;
 }
 
 #endif
