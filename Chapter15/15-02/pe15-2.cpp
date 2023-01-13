@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
-#include <stdexcept>
+#include <string>
+#include "exc_mean.h"
 
 double hmean(double a, double b);
 double gmean(double a, double b);
@@ -19,27 +20,30 @@ int main(){
             cout<<x<<", "<<y<<"의 기하평균은 "<<gmean(x, y)<<"입니다.\n";
             cout<<"다른 두 수를 입력하십시오(끝내려면 q): ";
         }
-        catch(const std::domain_error& gg){
+        catch(bad_hmean & hg){
+            hg.show();
+            cout<<hg.what();
+            cout<<"다시 하십시오.\n";
+            continue;
+        }
+        catch(bad_gmean& gg){
+            gg.show();
             cout<<gg.what();
             cout<<"죄송합니다. 더 이상 진행할 수 없습니다.\n";
             break;
-        }
-
-        catch(const std::logic_error& le){
-            cout<<le.what();
-            cout<<"다시 하십시오.\n";
-            continue;
         }
     }
     cout<<"프로그램을 종료합니다.\n";
 }
 
 double hmean(double a, double b){
-    if(a == -b) throw std::logic_error("hmean의 값은 a = -b 가 될 수 없습니다!\n");
+    std::string err_msg("hmean의 값은 a = -b 가 될 수 없습니다!\n");
+    if(a == -b) throw bad_hmean(err_msg, a, b);
     return 2.0 * a * b / (a + b);
 }
 
 double gmean(double a, double b){
-    if(a < 0 || b < 0) throw std::domain_error("gmean의 값은 모두 양수여야 합니다!\n");
+    std::string err_msg("gmean의 값은 모두 양수여야 합니다!\n");
+    if(a < 0 || b < 0) throw bad_gmean(err_msg, a, b);
     return std::sqrt(a * b);
 }
